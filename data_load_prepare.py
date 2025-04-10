@@ -16,3 +16,13 @@ def filter_empty_translations(batch):
     return filtered_batch
 
 filtered_dataset = dataset.map(filter_empty_translations, batched=True)
+
+import torch
+BATCH_SIZE = 4  
+EPOCHS = 5
+CLIP_NORM = 1.0  # Gradient clipping
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+# Dataloaders
+train_dataloader = DataLoader(tokenized_dataset["train"], batch_size=BATCH_SIZE, shuffle=True)
+val_dataloader = DataLoader(tokenized_dataset['validation'], batch_size=BATCH_SIZE)
