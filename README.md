@@ -1,7 +1,7 @@
 # machine-translation-transformer-scratch
 ## Project Overview
 
-The project implements a custom Transformer model in PyTorch to perform machine language translation between English and Urdu. The model is constructed following the standard Transformer architecture principles, including separate encoder and decoder components, multi-head attention mechanisms, positional encoding, and a final linear projection layer.
+The project implements a custom Transformer model in PyTorch from scratch to perform machine language translation between English and Urdu. The model is constructed following the standard Transformer architecture principles, including separate encoder and decoder components, multi-head attention mechanisms, positional encoding, and a final linear projection layer.
 ## Key Features
 
 - **Custom Transformer Implementation**: Built from scratch using PyTorch, tailored specifically for English to Urdu translation.
