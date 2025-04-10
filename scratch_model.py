@@ -308,3 +308,16 @@ def build_transformer(src_vocab_size: int, tgt_vocab_size: int, src_seq_len: int
             nn.init.xavier_uniform_(p)
 
     return transformer
+
+# Initialize model
+model = build_transformer(
+    src_vocab_size=119547,  # From tokenizer size
+    tgt_vocab_size=119547,  # Assuming source & target vocab sizes are same
+    src_seq_len=512,  # Change if your sequences are different
+    tgt_seq_len=512,  # Change if needed
+    d_model=512,  # Standard Transformer size
+    N=2,  #
+    h=8,  # 8 heads
+    dropout=0.1,
+    d_ff=2048
+).to(DEVICE)
