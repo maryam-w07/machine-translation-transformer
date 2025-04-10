@@ -79,3 +79,7 @@ def train():
     token_acc = correct_tokens / total_tokens
 
     return avg_loss, token_acc
+EPOCHS = 5
+for epoch in range(EPOCHS):
+    train_loss, train_acc = train()
+    print(f"Epoch {epoch+1}: Train Loss = {train_loss:.4f}, Train Acc = {train_acc:.4f}")
