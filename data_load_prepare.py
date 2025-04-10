@@ -1,4 +1,4 @@
-!pip install datasets
+
 from datasets import load_dataset
 
 # Load the OPUS100 dataset for English-Urdu
